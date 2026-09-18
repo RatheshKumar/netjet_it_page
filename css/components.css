@@ -7,10 +7,15 @@
 .site-nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   background-color: var(--cream);
-  border-bottom: 2px solid var(--ink); /* Strong structural separation */
+  border-bottom: 2px solid var(--ink);
   transition: transform var(--dur-mid) var(--ease-out);
+}
+
+/* For the absolute-positioned mobile dropdown to anchor to the nav bar */
+.nav-inner {
+  position: relative;
 }
 
 .site-nav.scroll-up { transform: translateY(0); }
@@ -65,7 +70,7 @@
 
 /* Nav links - structural tabs */
 .nav-links {
-  display: none;
+  display: none; /* Hidden on mobile; shown at 992px via media query */
   align-items: stretch;
   height: 100%;
 }
@@ -135,6 +140,8 @@
   cursor: pointer;
   padding: 0 var(--gutter);
   box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-violet .nav-toggle { border-left-color: var(--cream); }
@@ -160,9 +167,11 @@
   display: flex;
   flex-direction: column;
   padding: var(--space-m) var(--gutter) var(--space-xl);
-  transform: translateY(-150%);
+  transform: translateY(-110%);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  z-index: 199;
   transition: transform var(--dur-mid) var(--ease-out), opacity var(--dur-mid), visibility var(--dur-mid);
 }
 
@@ -170,11 +179,12 @@
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .nav-mobile a {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: var(--step-3);
+  font-size: var(--step-2);
   font-weight: var(--fw-bold);
   color: var(--cream);
   padding-block: var(--space-m);
@@ -188,6 +198,7 @@
 @media (min-width: 992px) {
   .nav-toggle { display: none; }
   .nav-links { display: flex; }
+  .nav-mobile { display: none !important; }
 }
 
 /* â”€â”€â”€ Page Hero (Architectural) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -645,3 +656,7 @@
   from { transform: translateX(0%); }
   to   { transform: translateX(-100%); }
 }
+
+
+
+
