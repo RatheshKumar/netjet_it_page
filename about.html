@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <style>
     .vmv-item {
       padding-block: var(--space-2xl);
@@ -117,6 +118,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+      <a href="product.html">Products</a>
         <a href="work.html">Work</a>
         <a href="industries.html">Industries</a>
         <a href="team.html">Team</a>
@@ -133,6 +135,7 @@
     <div class="nav-mobile" role="navigation" aria-label="Mobile navigation" id="mobile-nav" aria-hidden="true">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="product.html">Products</a>
       <a href="work.html">Work</a>
       <a href="industries.html">Industries</a>
       <a href="team.html">Team</a>
@@ -147,7 +150,7 @@
     <!-- Hero -->
     <header class="page-hero page-hero--violet" aria-labelledby="about-heading">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: end;">
+        <div class="resp-grid" style="align-items: end;">
           <div>
             <p class="section-label section-label--light">About</p>
             <h1 id="about-heading" style="color: var(--cream); line-height: 1.05;">
@@ -224,7 +227,7 @@
     <!-- To add the CEO's message: replace the bracketed text and name below -->
     <section class="section" style="background-color: var(--ink);" aria-labelledby="ceo-heading">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 3fr 2fr; gap: var(--space-3xl); align-items: start;">
+        <div class="resp-grid" style="align-items: start;">
           <div>
             <p class="section-label section-label--light">A message from our founder</p>
             <blockquote>
@@ -252,7 +255,7 @@
     <!-- Certifications -->
     <section class="section" aria-labelledby="certs-heading">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start;">
+        <div class="resp-grid" style="align-items: start;">
           <div>
             <p class="section-label">Quality &amp; Security Standards</p>
             <h2 id="certs-heading" style="margin-bottom: var(--space-l); max-width: 22ch;">Our Certifications</h2>
@@ -345,4 +348,8 @@
   <script src="js/nav.js"></script>
 </body>
 </html>
+
+
+
+
 

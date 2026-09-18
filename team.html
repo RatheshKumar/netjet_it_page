@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
 
@@ -31,6 +32,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+      <a href="product.html">Products</a>
         <a href="work.html">Work</a>
         <a href="industries.html">Industries</a>
         <a href="team.html" aria-current="page">Team</a>
@@ -47,6 +49,7 @@
     <div class="nav-mobile" role="navigation" aria-label="Mobile navigation" id="mobile-nav" aria-hidden="true">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="product.html">Products</a>
       <a href="work.html">Work</a>
       <a href="industries.html">Industries</a>
       <a href="team.html">Team</a>
@@ -61,7 +64,7 @@
     <!-- Hero -->
     <header class="page-hero page-hero--cream" aria-labelledby="team-heading">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: end;">
+        <div class="resp-grid" style="align-items: end;">
           <div>
             <p class="section-label">Our Team</p>
             <h1 id="team-heading" style="margin-bottom: var(--space-m);">
@@ -283,7 +286,7 @@
     <!-- Closing statement -->
     <section class="section" style="background-color: var(--violet);" aria-labelledby="team-closing-heading">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: center;">
+        <div class="resp-grid" style="align-items: center;">
           <div>
             <p class="section-label section-label--light">The culture</p>
             <h2 id="team-closing-heading" style="color: var(--cream); max-width: 22ch;">
@@ -350,4 +353,8 @@
   <script src="js/nav.js"></script>
 </body>
 </html>
+
+
+
+
 
