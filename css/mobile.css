@@ -1,0 +1,250 @@
+/*
+  NETJET INFOTECH
+  Mobile Responsive Overrides
+  Breakpoints: 768px (tablet), 480px (phone)
+*/
+
+/* ─── Global Mobile Resets ──────────────────────── */
+@media (max-width: 768px) {
+
+  /* Reduce section vertical padding */
+  .section,
+  [class*="page-hero"] {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  /* Prevent anything from overflowing horizontally */
+  body { overflow-x: hidden; }
+  img, svg, video { max-width: 100%; }
+
+  /* Headings: use fluid scale properly */
+  h1 { font-size: clamp(2rem, 9vw, 3.5rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.6rem, 7vw, 2.5rem); }
+  h3 { font-size: clamp(1.3rem, 5vw, 1.9rem); }
+
+  /* Spacing tokens — reduce heavy gaps on mobile */
+  .section { padding-block: var(--space-2xl); }
+
+  /* ─── Hero section ─────────────────────────────── */
+  .hero-inner,
+  [style*="grid-template-columns: 7fr 5fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: 4fr 7fr"],
+  [style*="grid-template-columns: 3fr 2fr"],
+  [style*="grid-template-columns: 10rem 1fr"],
+  [style*="grid-template-columns: 1fr 1fr; gap: var(--space-3xl)"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  /* Also handle repeat() patterns */
+  [style*="grid-template-columns: repeat(2, 1fr)"],
+  [style*="grid-template-columns: repeat(3, 1fr)"],
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-l) !important;
+  }
+
+  /* Hero aside panel — hide on mobile (info overload) */
+  .hero-aside { display: none; }
+
+  /* Hero body text width */
+  .hero-body,
+  .hero-sub { max-width: 100%; }
+
+  /* Hero actions — stack vertically */
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-m);
+  }
+  .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
+  /* ─── Services teaser grid ──────────────────────── */
+  .services-teaser .container {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  /* ─── Contact block ─────────────────────────────── */
+  .contact-block-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  /* ─── Structural grids (12-col) ─────────────────── */
+  .grid-structural {
+    grid-template-columns: 1fr !important;
+    border-left: none;
+    border-top: var(--border-structural-light);
+  }
+  .grid-structural .grid-cell {
+    border-right: none;
+    border-left: var(--border-structural-light);
+  }
+
+  /* ─── 4-col grids → 2-col ───────────────────────── */
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* ─── Stats / pillars grid ───────────────────────── */
+  .pillars-grid,
+  .stats-grid,
+  .facts-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ─── Card grids ──────────────────────────────────── */
+  .service-cards-grid,
+  .work-grid,
+  .team-grid,
+  .industry-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-l);
+  }
+
+  /* ─── Page hero (inner hero grid) ───────────────── */
+  .page-hero .container > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+
+  /* ─── Footer grid ───────────────────────────────── */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl);
+  }
+  .footer-col + .footer-col { border-left: none; border-top: var(--border-structural-dark); padding-top: var(--space-l); }
+
+  /* ─── Marquee ───────────────────────────────────── */
+  .marquee-content { animation-duration: 20s; }
+
+  /* ─── Process timeline ──────────────────────────── */
+  .process-timeline { gap: var(--space-l); }
+  .process-step { padding: var(--space-l); }
+
+  /* ─── Form fields ───────────────────────────────── */
+  .form-row,
+  [style*="grid-template-columns: 1fr 1fr; gap: var(--space-s)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ─── Borders: remove side borders that cause visual mess ── */
+  .grid-2 > div,
+  .grid-3 > div { border-right: none; border-bottom: var(--border-structural-light); }
+  .grid-2 > div:last-child,
+  .grid-3 > div:last-child { border-bottom: none; }
+
+  /* ─── Typography overflow fix ───────────────────── */
+  p { max-width: 100%; word-break: break-word; }
+  h1, h2, h3 { word-break: break-word; overflow-wrap: break-word; }
+
+  /* ─── Track grid in careers ─────────────────────── */
+  .track-grid { grid-template-columns: 1fr !important; }
+
+  /* ─── Offices grid in contact ────────────────────── */
+  .offices-grid { grid-template-columns: 1fr !important; }
+
+  /* ─── Team/About vision-mission grid ─────────────── */
+  .vmv-item { grid-template-columns: 1fr !important; }
+}
+
+/* ─── Phone (≤480px) ────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Font sizes */
+  h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  h2 { font-size: clamp(1.4rem, 7vw, 2rem); }
+
+  /* Nav: make toggle area larger for thumbs */
+  .nav-toggle { width: 44px; height: 44px; }
+  .nav-logo-text span { display: none; } /* Hide "INFOTECH PVT LTD" sub-line at tiny sizes */
+
+  /* Pillars / stats: stack to 1 col */
+  .pillars-grid,
+  .stats-grid,
+  .facts-grid,
+  .grid-4 { grid-template-columns: 1fr !important; }
+
+  /* Buttons: full width */
+  .btn { width: 100%; justify-content: center; text-align: center; }
+  .hero-actions { gap: var(--space-s); }
+
+  /* Section padding */
+  .section,
+  .page-hero { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+
+  /* Remove heavy left padding on containers */
+  .container { padding-inline: 1rem; }
+
+  /* Marquee text slightly smaller */
+  .marquee-item svg { height: 16px; }
+
+  /* Work / case study cards: remove side borders */
+  .work-card,
+  .service-card { border-left: none; border-top: 3px solid var(--ink); }
+
+  /* Cert / badge items: stack */
+  .cert-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── Tablet landscape (769px–1024px) ──────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+
+  /* 4-col → 2-col */
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Asymmetric grids → even split */
+  [style*="grid-template-columns: 7fr 5fr"],
+  [style*="grid-template-columns: 4fr 7fr"],
+  [style*="grid-template-columns: 3fr 2fr"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-2xl) !important;
+  }
+
+  /* Footer: 2 col */
+  .footer-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Hero aside: show but compact */
+  .hero-aside { display: flex; flex-direction: row; flex-wrap: wrap; gap: var(--space-l); }
+  .hero-aside-item { flex: 1 1 calc(50% - var(--space-l)); }
+}
+
+/* ─── Responsive grid utility classes ───────────── */
+/* Applied via JS or added to HTML as data- attributes */
+/* These match common inline patterns found in page HTML */
+
+/* For inline style fallbacks: wrap any 2-col grid div with .resp-grid */
+.resp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+  .resp-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .resp-grid {
+    gap: var(--space-l) !important;
+  }
+}
+
+/* ─── Contact form row grid ───────────── */
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-s) var(--space-l);
+}
+
+@media (max-width: 768px) {
+  .form-row-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
