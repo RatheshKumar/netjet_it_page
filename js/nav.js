@@ -1,101 +1,83 @@
 /*
-  NETJET INFOTECH
-  Navigation — sticky header, mobile hamburger toggle, active page highlight
+  NETJET INFOTECH — Navigation
+  Mobile hamburger menu + sticky header + active page highlight
 */
-
 (function () {
   'use strict';
 
-  const nav     = document.querySelector('.site-nav');
-  const toggle  = document.querySelector('.nav-toggle');
-  const mobile  = document.querySelector('.nav-mobile');
+  var nav    = document.querySelector('.site-nav');
+  var toggle = document.querySelector('.nav-toggle');
+  var menu   = document.querySelector('.nav-mobile');
 
-  if (!nav) return;
+  if (!nav || !toggle || !menu) return;
 
-  /* ── Sticky: hide on scroll down, show on scroll up ─────────── */
-  let lastY = 0;
+  /* ── Toggle open / closed ─────────────────────── */
+  function isOpen() {
+    return menu.classList.contains('is-open');
+  }
+
+  function openMenu() {
+    menu.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    // Animate hamburger → X
+    var bars = toggle.querySelectorAll('.nav-toggle-bar');
+    if (bars[0]) bars[0].style.transform = 'translateY(7px) rotate(45deg)';
+    if (bars[1]) bars[1].style.opacity   = '0';
+    if (bars[2]) bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    // Reset hamburger bars
+    var bars = toggle.querySelectorAll('.nav-toggle-bar');
+    if (bars[0]) bars[0].style.transform = '';
+    if (bars[1]) bars[1].style.opacity   = '';
+    if (bars[2]) bars[2].style.transform = '';
+  }
+
+  /* ── Hamburger button click ───────────────────── */
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    isOpen() ? closeMenu() : openMenu();
+  });
+
+  /* ── Close on any nav link tap ───────────────── */
+  var links = menu.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', closeMenu);
+  }
+
+  /* ── Close on outside tap ────────────────────── */
+  document.addEventListener('click', function (e) {
+    if (isOpen() && !nav.contains(e.target)) closeMenu();
+  });
+
+  /* ── Close on Escape key ─────────────────────── */
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Escape' || e.key === 'Esc') && isOpen()) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  /* ── Sticky scroll behaviour ─────────────────── */
   window.addEventListener('scroll', function () {
-    const y = window.pageYOffset;
-    if (y > 80) {
+    if (window.pageYOffset > 80) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
     }
-    lastY = y;
   }, { passive: true });
 
-  /* ── Mobile hamburger ──────────────────────────────────────────
-     CSS class is: .nav-mobile.is-open
-     This JS adds / removes .is-open to match exactly.           */
-  function openMenu() {
-    mobile.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
-    mobile.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // prevent scroll behind menu
-    animateBars(true);
-  }
-
-  function closeMenu() {
-    mobile.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    mobile.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    animateBars(false);
-  }
-
-  function animateBars(open) {
-    const bars = toggle.querySelectorAll('.nav-toggle-bar');
-    if (!bars.length) return;
-    if (open) {
-      bars[0].style.transform = 'translateY(7px) rotate(45deg)';
-      bars[1].style.opacity   = '0';
-      bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-    } else {
-      bars[0].style.transform = '';
-      bars[1].style.opacity   = '';
-      bars[2].style.transform = '';
-    }
-  }
-
-  if (toggle && mobile) {
-    /* Click / tap on hamburger */
-    toggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      if (mobile.classList.contains('is-open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    /* Close when a nav link is tapped */
-    mobile.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', closeMenu);
-    });
-
-    /* Close when tapping outside the nav */
-    document.addEventListener('click', function (e) {
-      if (mobile.classList.contains('is-open') && !nav.contains(e.target)) {
-        closeMenu();
-      }
-    });
-
-    /* Close on Escape key */
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && mobile.classList.contains('is-open')) {
-        closeMenu();
-        toggle.focus();
-      }
-    });
-  }
-
-  /* ── Active page link highlight ────────────────────────────── */
-  const page = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(function (a) {
-    const href = a.getAttribute('href') || '';
+  /* ── Mark active page link ───────────────────── */
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  var allLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
+  for (var j = 0; j < allLinks.length; j++) {
+    var href = allLinks[j].getAttribute('href') || '';
     if (href === page || (page === '' && href === 'index.html')) {
-      a.setAttribute('aria-current', 'page');
+      allLinks[j].setAttribute('aria-current', 'page');
     }
-  });
+  }
 
 })();
