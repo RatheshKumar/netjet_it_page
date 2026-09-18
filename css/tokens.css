@@ -1,0 +1,66 @@
+/*
+  NETJET INFOTECH
+  Design Tokens — Structural Blueprint System
+*/
+
+:root {
+  /* Colour palette - High Contrast, No Gradients */
+  --cream:       #F7F3EC;
+  --cream-mid:   #EDE7DA;
+  --violet:      #332A61;
+  --violet-deep: #1A1536; /* Darker for higher contrast */
+  --brand:       #483D8B;
+  --ink:         #111016; /* Near black for maximum starkness */
+  --ink-soft:    #4A4754;
+  --terra:       #E05D14; /* Brighter, sharper orange/terracotta */
+  --terra-dark:  #B84A0D;
+  --white:       #FFFFFF;
+
+  /* Structural Rules - the core of the aesthetic */
+  --rule-light:  rgba(17, 16, 22, 0.15); /* Ink transparent on cream */
+  --rule-dark:   rgba(247, 243, 236, 0.15); /* Cream transparent on dark */
+  
+  --border-structural-light: 1px solid var(--rule-light);
+  --border-structural-dark:  1px solid var(--rule-dark);
+  --border-heavy-light:      2px solid var(--ink);
+  --border-heavy-dark:       2px solid var(--cream);
+
+  /* Typography — weights */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+  --fw-extrabold: 800;
+
+  /* Type scale (fluid) */
+  --step--1: clamp(0.75rem, 0.71rem + 0.18vw, 0.85rem);
+  --step-0:  clamp(1rem,    0.95rem + 0.26vw, 1.125rem);
+  --step-1:  clamp(1.2rem,  1.12rem + 0.41vw, 1.4rem);
+  --step-2:  clamp(1.44rem, 1.31rem + 0.68vw, 1.75rem);
+  --step-3:  clamp(1.73rem, 1.51rem + 1.1vw,  2.25rem);
+  --step-4:  clamp(2.07rem, 1.72rem + 1.78vw, 2.9rem);
+  --step-5:  clamp(2.49rem, 1.93rem + 2.8vw,  3.75rem);
+  --step-6:  clamp(3.2rem,  2.3rem + 4.5vw,   5.5rem);
+  --step-7:  clamp(4rem,    2.8rem + 6vw,     7.5rem); /* Added for huge structural type */
+
+  /* Spacing */
+  --space-xs:   0.5rem;
+  --space-s:    1rem;
+  --space-m:    1.5rem;
+  --space-l:    2rem;
+  --space-xl:   3rem;
+  --space-2xl:  4.5rem;
+  --space-3xl:  7rem;
+  --space-4xl:  10rem;
+
+  /* Layout */
+  --max-width:    1440px; /* Wider for more architectural space */
+  --gutter:       clamp(1.25rem, 5vw, 4rem);
+  --col-gap:      0; /* Removing column gap, relying on borders instead */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* Snappier, less floating */
+  --dur-fast: 150ms;
+  --dur-mid:  250ms;
+  --dur-slow: 400ms;
+}

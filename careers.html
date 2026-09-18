@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers & Internships — NETJET INFOTECH</title>
+  <meta name="description" content="Join NETJET INFOTECH — open roles and a structured 3-6 month internship programme across software development, cybersecurity, data analytics, cloud computing, design, and more.">
+  <link rel="canonical" href="https://netjetit.com/careers.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: var(--border-rule);
+    }
+
+    .track-item {
+      padding: var(--space-l) var(--space-m);
+      border-right: var(--border-rule);
+      border-bottom: var(--border-rule);
+    }
+
+    .track-item:nth-child(4n) { border-right: none; }
+
+    .track-num {
+      
+      font-size: var(--step--1);
+      color: var(--brand);
+      opacity: 0.5;
+      margin-bottom: 0.4rem;
+    }
+
+    .track-name {
+      
+      font-size: var(--step-1);
+      color: var(--ink);
+      font-weight: var(--fw-semibold);
+      line-height: 1.25;
+    }
+
+    .benefit-row {
+      padding-block: var(--space-m);
+      border-bottom: var(--border-rule-dark);
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: var(--space-m);
+      align-items: start;
+    }
+
+    .benefit-mark {
+      
+      font-size: var(--step-0);
+      color: var(--terra);
+    }
+
+    .benefit-text {
+      
+      font-size: var(--step-0);
+      color: var(--cream);
+      line-height: 1.5;
+    }
+
+    .eligibility-box {
+      border: var(--border-rule);
+      padding: var(--space-xl);
+      background-color: var(--cream-mid);
+    }
+
+    .eligibility-item {
+      display: flex;
+      gap: var(--space-m);
+      align-items: baseline;
+      padding-block: var(--space-s);
+      border-bottom: var(--border-rule);
+    }
+
+    .eligibility-item:last-child { border-bottom: none; }
+
+    .eligibility-mark {
+      
+      font-size: var(--step--1);
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .eligibility-text {
+      font-size: var(--step-0);
+      color: var(--ink-soft);
+    }
+
+    @media (max-width: 900px) {
+      .track-grid { grid-template-columns: repeat(2, 1fr); }
+      .track-item:nth-child(4n) { border-right: var(--border-rule); }
+      .track-item:nth-child(2n) { border-right: none; }
+    }
+
+    @media (max-width: 540px) {
+      .track-grid { grid-template-columns: 1fr; }
+      .track-item:nth-child(2n) { border-right: var(--border-rule); }
+      .track-item { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="NETJET INFOTECH — home">
+        <svg class="nav-logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" fill="#483D8B"/>
+          <path d="M6 8h6l8 12V8h6v16h-6L12 12v12H6V8z" fill="#F7F3EC"/>
+        </svg>
+        <div class="nav-logo-text">
+          NETJET
+          <span>INFOTECH PVT LTD</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="careers.html" aria-current="page">Careers</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get in touch</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="industries.html">Industries</a>
+      <a href="team.html">Team</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <header class="page-hero page-hero--cream" aria-labelledby="careers-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: end;">
+          <div>
+            <p class="section-label">Careers &amp; Internships</p>
+            <h1 id="careers-heading" style="margin-bottom: var(--space-m);">
+              Careers &<br><em style="color:var(--brand); font-style:italic;">Internships</em>
+            </h1>
+          </div>
+          <div>
+            <p style="font-size: var(--step-1); color: var(--ink-soft); max-width: 44ch; line-height: 1.65;">We're a small team by choice. Every person we add has to make the work better — and every person who joins us gets to work on problems that matter, with people who take craft seriously.</p>
+          </div>
+        </div>
+        <hr class="rule" style="margin-top: var(--space-2xl);">
+      </div>
+    </header>
+
+    <!-- Internship tracks -->
+    <section class="section" aria-labelledby="tracks-heading">
+      <div class="container">
+        <p class="section-label">Internship Programme</p>
+        <h2 id="tracks-heading" style="margin-bottom: var(--space-xl); max-width: 24ch;">Our Internship Tracks</h2>
+        <p style="font-size: var(--step-0); color: var(--ink-soft); max-width: 56ch; line-height: 1.7; margin-bottom: var(--space-2xl);">Our IT Research Lab runs a 3–6 month paid internship programme for students and recent graduates. You'll be assigned to a live project, mentored by an experienced team member, and treated as a contributor — not an observer.</p>
+
+        <div class="track-grid" role="list">
+          <div class="track-item" role="listitem">
+            <p class="track-num">01</p>
+            <p class="track-name">Software Development</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">02</p>
+            <p class="track-name">Cybersecurity</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">03</p>
+            <p class="track-name">Data Analytics</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">04</p>
+            <p class="track-name">Network Administration</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">05</p>
+            <p class="track-name">Cloud Computing</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">06</p>
+            <p class="track-name">UI / UX Design</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">07</p>
+            <p class="track-name">Graphic Design</p>
+          </div>
+          <div class="track-item" role="listitem">
+            <p class="track-num">08</p>
+            <p class="track-name">Web Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="section" style="background-color: var(--cream-mid); border-top: var(--border-rule); border-bottom: var(--border-rule);" aria-labelledby="eligibility-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl);">
+          <div>
+            <p class="section-label">Who should apply</p>
+            <h2 id="eligibility-heading" style="margin-bottom: var(--space-l); max-width: 20ch;">Candidate Eligibility</h2>
+          </div>
+          <div class="eligibility-box">
+            <div class="eligibility-item">
+              <span class="eligibility-mark">01</span>
+              <span class="eligibility-text">Currently enrolled in a relevant degree programme, or a recent graduate (within 12 months).</span>
+            </div>
+            <div class="eligibility-item">
+              <span class="eligibility-mark">02</span>
+              <span class="eligibility-text">Basic knowledge of the chosen track — you don't need to be expert, but you need to have started.</span>
+            </div>
+            <div class="eligibility-item">
+              <span class="eligibility-mark">03</span>
+              <span class="eligibility-text">A genuine 3–6 month commitment. Internships are structured programmes, not work experience days.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-step application process -->
+    <section class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="section-label">How to apply</p>
+        <h2 id="process-heading" style="margin-bottom: var(--space-xl);">Application Process</h2>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <span class="process-step__num">01</span>
+            <div>
+              <h3 class="process-step__title">Review open tracks</h3>
+              <p class="process-step__desc">Read through the eight internship tracks above and identify where your skills and interests align. There's no limit on which track you apply for — apply for the one that fits, not the one that sounds safest.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <span class="process-step__num">02</span>
+            <div>
+              <h3 class="process-step__title">Submit your application &amp; portfolio</h3>
+              <p class="process-step__desc">Complete the application form below. For design tracks, include portfolio work. For technical tracks, include a GitHub link or relevant project examples. A cover letter is optional but genuinely read.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <span class="process-step__num">03</span>
+            <div>
+              <h3 class="process-step__title">Assessment</h3>
+              <p class="process-step__desc">A short practical task relevant to your chosen track. Not designed to be a test of perfection — designed to see how you approach a problem and communicate your thinking.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <span class="process-step__num">04</span>
+            <div>
+              <h3 class="process-step__title">Interview</h3>
+              <p class="process-step__desc">A one-hour conversation with the team lead for your track. We talk about your work, your goals, and what you want to get out of the programme. This is also your chance to ask hard questions about us.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <span class="process-step__num">05</span>
+            <div>
+              <h3 class="process-step__title">Offer &amp; onboarding</h3>
+              <p class="process-step__desc">Successful candidates receive a formal offer letter with start date, team placement, and programme structure within five working days of the final interview.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" style="background-color: var(--violet);" aria-labelledby="benefits-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl);">
+          <div>
+            <p class="section-label section-label--light">What you get</p>
+            <h2 id="benefits-heading" style="color: var(--cream); max-width: 20ch;">Internship Benefits</h2>
+          </div>
+          <div>
+            <div class="benefit-row">
+              <span class="benefit-mark">&#x2714;</span>
+              <p class="benefit-text"><strong style="color:var(--cream);">Paid internship.</strong> Every track carries a stipend — the work is real, so the compensation is too.</p>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-mark">&#x2714;</span>
+              <p class="benefit-text"><strong style="color:var(--cream);">Dedicated mentorship.</strong> Each intern is assigned a named mentor from the core team — someone responsible for your growth, not just your task list.</p>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-mark">&#x2714;</span>
+              <p class="benefit-text"><strong style="color:var(--cream);">Professional development.</strong> Access to training materials, internal workshops, and a review process that gives you structured feedback.</p>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-mark">&#x2714;</span>
+              <p class="benefit-text"><strong style="color:var(--cream);">Network.</strong> Work alongside people from multiple countries and disciplines — a rare experience at an early career stage.</p>
+            </div>
+            <div class="benefit-row">
+              <span class="benefit-mark">&#x2714;</span>
+              <p class="benefit-text"><strong style="color:var(--cream);">Potential full-time offer.</strong> Strong interns are offered positions. This isn't a formality — several current team members started as interns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified application form -->
+    <section class="section" id="apply" aria-labelledby="apply-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start;">
+          <div>
+            <p class="section-label">Apply now</p>
+            <h2 id="apply-heading" style="max-width: 22ch; margin-bottom: var(--space-m);">Application Form</h2>
+            <p style="font-size: var(--step-0); color: var(--ink-soft); max-width: 44ch; line-height: 1.7;">Whether you're applying for an open role or an internship track, use this form. Tell us what you're looking for and we'll make sure it reaches the right person.</p>
+          </div>
+
+          <form data-netjet-form action="#" method="post" novalidate aria-label="Job and internship application form" enctype="multipart/form-data">
+            <div class="form-group">
+              <label class="form-label" for="apply-name">Full name <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="text" id="apply-name" name="name" required autocomplete="name" placeholder="Your full name">
+              <span class="form-error" data-error-for="name" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-phone">Phone number <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="tel" id="apply-phone" name="phone" required autocomplete="tel" placeholder="+91 …">
+              <span class="form-error" data-error-for="phone" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-email">Email address <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="email" id="apply-email" name="email" required autocomplete="email" placeholder="you@email.com">
+              <span class="form-error" data-error-for="email" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-track">Role or internship track <span aria-hidden="true">*</span></label>
+              <select class="form-select" id="apply-track" name="track" required>
+                <option value="" disabled selected>Select a role or track…</option>
+                <optgroup label="Internship Tracks">
+                  <option value="intern-software">Internship — Software Development</option>
+                  <option value="intern-cyber">Internship — Cybersecurity</option>
+                  <option value="intern-data">Internship — Data Analytics</option>
+                  <option value="intern-network">Internship — Network Administration</option>
+                  <option value="intern-cloud">Internship — Cloud Computing</option>
+                  <option value="intern-uiux">Internship — UI / UX Design</option>
+                  <option value="intern-graphic">Internship — Graphic Design</option>
+                  <option value="intern-web">Internship — Web Design</option>
+                </optgroup>
+                <optgroup label="Open Roles">
+                  <option value="open">Open Application (other role)</option>
+                </optgroup>
+              </select>
+              <span class="form-error" data-error-for="track" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-message">Cover note</label>
+              <textarea class="form-textarea" id="apply-message" name="message" rows="4" placeholder="Tell us about yourself — your background, what you're looking for, and why NETJET."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-file-label" for="apply-resume">
+                <span aria-hidden="true">&#128206;</span>
+                Resume / Portfolio — upload PDF, DOCX, or ZIP (max 10 MB)
+              </label>
+              <input class="form-file-input" type="file" id="apply-resume" name="resume" accept=".pdf,.doc,.docx,.zip" aria-describedby="resume-hint">
+              <p id="resume-hint" style=" font-size:var(--step--1); color:var(--ink-soft);">For design tracks, please include portfolio examples in your upload.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit application</button>
+            <p class="form-success" hidden role="status"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">NETJET INFOTECH</div>
+          <span class="footer-logo-sub">PVT LTD</span>
+          <p class="footer-tagline">"Your goal, our code."<br>Innovate. Design. Inspire. Succeed.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="work.html">Our Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html#build">Build</a></li>
+            <li><a href="services.html#run">Run</a></li>
+            <li><a href="services.html#grow">Grow</a></li>
+            <li><a href="services.html#specialize">Specialize</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <address class="footer-address">
+            Suite 85J, A Square, Kochi<br>
+            <a href="tel:+918220201666">+91 82202 01666</a><br>
+            <a href="mailto:info@netjetit.com">info@netjetit.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">&copy; 2024 NETJET INFOTECH PVT LTD &nbsp;·&nbsp; CIN U62099KL2023PTC081794</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/netjet.design" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/918220201666" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work — NETJET INFOTECH</title>
+  <meta name="description" content="Selected projects from NETJET INFOTECH — web platforms, brand identities, mobile applications, social campaigns, and digital creative from our studio in Kochi, Kerala.">
+  <link rel="canonical" href="https://netjetit.com/work.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* Showreel embed */
+    .showreel-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background-color: var(--ink);
+      border: var(--border-rule);
+    }
+
+    .showreel-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-m);
+    }
+
+    .showreel-placeholder__label {
+      
+      font-size: var(--step--1);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.35;
+    }
+
+    .showreel-placeholder__note {
+      
+      font-size: var(--step--1);
+      color: var(--cream);
+      opacity: 0.2;
+    }
+
+    /* Gallery filter tabs */
+    .gallery-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: var(--border-rule);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .gallery-tab {
+      
+      font-size: var(--step-0);
+      font-weight: var(--fw-medium);
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      color: var(--ink-soft);
+      margin-bottom: -1px;
+      transition: color var(--dur-fast), border-color var(--dur-fast);
+    }
+
+    .gallery-tab.active {
+      color: var(--brand);
+      border-bottom-color: var(--brand);
+    }
+
+    .gallery-item { transition: opacity var(--dur-mid) var(--ease-out); }
+    .gallery-item.hidden { display: none; }
+
+    .client-note {
+      margin-top: var(--space-2xl);
+      padding: var(--space-l);
+      border: var(--border-rule);
+      border-left: 3px solid var(--brand);
+    }
+
+    .client-note p {
+      
+      font-size: var(--step--1);
+      color: var(--ink-soft);
+      max-width: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="NETJET INFOTECH — home">
+        <svg class="nav-logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" fill="#483D8B"/>
+          <path d="M6 8h6l8 12V8h6v16h-6L12 12v12H6V8z" fill="#F7F3EC"/>
+        </svg>
+        <div class="nav-logo-text">
+          NETJET
+          <span>INFOTECH PVT LTD</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get in touch</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="industries.html">Industries</a>
+      <a href="team.html">Team</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- Page hero -->
+    <header class="page-hero page-hero--cream" aria-labelledby="work-page-heading">
+      <div class="container">
+        <p class="section-label">Our Work</p>
+        <h1 id="work-page-heading" style="max-width:18ch; margin-bottom: var(--space-m);">
+          Projects that<br><em style="color:var(--brand);">speak for themselves.</em>
+        </h1>
+        <p class="lead" style="color: var(--ink-soft);">A selection of work across web platforms, brand identity, mobile applications, social campaigns, and digital creative — drawn from engagements across India, Southeast Asia, and Europe.</p>
+      </div>
+    </header>
+
+    <!-- Showreel -->
+    <section class="section" style="background-color: var(--cream-mid); border-top: var(--border-rule); border-bottom: var(--border-rule);" aria-labelledby="showreel-heading">
+      <div class="container">
+        <p class="section-label">Company Showreel</p>
+        <h2 id="showreel-heading" style="margin-bottom: var(--space-xl);">Company Showreel</h2>
+        <div class="showreel-wrap">
+          <!-- Replace VIMEO_ID with the real video ID when available -->
+          <!-- Example: <iframe src="https://player.vimeo.com/video/VIMEO_ID" ... /> -->
+          <div class="showreel-placeholder" aria-label="Company showreel — video coming soon">
+            <p class="showreel-placeholder__label">Showreel</p>
+            <p class="showreel-placeholder__note">Video will be embedded here — replace VIMEO_ID in the source</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio gallery -->
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <p class="section-label">Selected Projects</p>
+        <h2 id="gallery-heading" style="margin-bottom: var(--space-2xl);">Case Studies</h2>
+
+        <!-- Category filter -->
+        <div class="gallery-filter" role="tablist" aria-label="Filter projects by category">
+          <button class="gallery-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="gallery-tab" data-filter="brand" role="tab" aria-selected="false">Brand Identity</button>
+          <button class="gallery-tab" data-filter="web" role="tab" aria-selected="false">Web Platform</button>
+          <button class="gallery-tab" data-filter="social" role="tab" aria-selected="false">Social Campaign</button>
+          <button class="gallery-tab" data-filter="print" role="tab" aria-selected="false">Print &amp; Signage</button>
+          <button class="gallery-tab" data-filter="digital" role="tab" aria-selected="false">Digital Creative</button>
+        </div>
+
+        <div class="work-gallery" id="work-gallery" role="list">
+
+          <!-- Placeholder items — replace with real assets by adding src to img tags -->
+          <article class="gallery-item work-item work-item--placeholder" data-category="brand" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Brand Identity</span>
+              <span class="work-item-caption__title">Visual identity system</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="web" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Web Platform</span>
+              <span class="work-item-caption__title">Corporate web portal</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="social" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Social Campaign</span>
+              <span class="work-item-caption__title">Product launch creative</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="brand" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Brand Identity</span>
+              <span class="work-item-caption__title">Logo &amp; brand guidelines</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="digital" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Digital Creative</span>
+              <span class="work-item-caption__title">Ad creative set</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="web" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Web Platform</span>
+              <span class="work-item-caption__title">eCommerce store</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="print" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Print &amp; Signage</span>
+              <span class="work-item-caption__title">Exhibition materials</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="social" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Social Campaign</span>
+              <span class="work-item-caption__title">Festive social series</span>
+            </div>
+          </article>
+
+          <article class="gallery-item work-item work-item--placeholder" data-category="digital" role="listitem">
+            <div class="work-placeholder-inner">
+              <span>Image pending</span>
+            </div>
+            <div class="work-item-caption">
+              <span class="work-item-caption__cat">Digital Creative</span>
+              <span class="work-item-caption__title">Motion graphics</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="client-note" role="note">
+          <p><strong>Client names and specific project outcomes are available on request.</strong> We don't publish client metrics without permission — if you'd like a reference for a particular industry or service, <a href="contact.html" style="color: var(--brand);">get in touch</a> and we'll connect you directly.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">NETJET INFOTECH</div>
+          <span class="footer-logo-sub">PVT LTD</span>
+          <p class="footer-tagline">"Your goal, our code."<br>Innovate. Design. Inspire. Succeed.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="work.html">Our Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html#build">Build</a></li>
+            <li><a href="services.html#run">Run</a></li>
+            <li><a href="services.html#grow">Grow</a></li>
+            <li><a href="services.html#specialize">Specialize</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <address class="footer-address">
+            Suite 85J, A Square, Kochi<br>
+            <a href="tel:+918220201666">+91 82202 01666</a><br>
+            <a href="mailto:info@netjetit.com">info@netjetit.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">&copy; 2024 NETJET INFOTECH PVT LTD &nbsp;·&nbsp; CIN U62099KL2023PTC081794</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/netjet.design" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/918220201666" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    // Gallery filter — inline since it's page-specific and lightweight
+    (function () {
+      const tabs = document.querySelectorAll('.gallery-tab');
+      const items = document.querySelectorAll('.gallery-item');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const filter = tab.dataset.filter;
+          tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          items.forEach(item => {
+            const match = filter === 'all' || item.dataset.category === filter;
+            item.classList.toggle('hidden', !match);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

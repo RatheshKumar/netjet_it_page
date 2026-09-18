@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — NETJET INFOTECH PVT LTD</title>
+  <meta name="description" content="NETJET INFOTECH is an ISO-certified IT and design company incorporated in Kochi, Kerala in 2023. Learn about our vision, mission, values, certifications, and leadership.">
+  <link rel="canonical" href="https://netjetit.com/about.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .vmv-item {
+      padding-block: var(--space-2xl);
+      border-bottom: var(--border-rule);
+      display: grid;
+      grid-template-columns: 10rem 1fr;
+      gap: var(--space-l);
+      align-items: start;
+    }
+
+    .vmv-item:last-child { border-bottom: none; }
+
+    .vmv-label {
+      
+      font-size: var(--step--1);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0.35;
+      padding-top: 0.3em;
+    }
+
+    .vmv-body {
+      
+      font-size: var(--step-3);
+      font-weight: var(--fw-regular);
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .vmv-body em {
+      font-style: italic;
+      color: var(--brand);
+    }
+
+    /* Company facts strip */
+    .facts-strip {
+      background-color: var(--cream-mid);
+      border-top: var(--border-rule);
+      border-bottom: var(--border-rule);
+      padding-block: var(--space-2xl);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .fact-item {
+      padding: var(--space-m);
+      border-right: var(--border-rule);
+    }
+
+    .fact-item:last-child { border-right: none; }
+
+    .fact-label {
+      
+      font-size: var(--step--1);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0.4;
+      margin-bottom: 0.4rem;
+    }
+
+    .fact-value {
+      
+      font-size: var(--step-1);
+      color: var(--ink);
+      font-weight: var(--fw-semibold);
+    }
+
+    @media (max-width: 900px) {
+      .vmv-item { grid-template-columns: 1fr; gap: var(--space-xs); }
+      .facts-grid { grid-template-columns: 1fr 1fr; }
+      .fact-item:nth-child(2) { border-right: none; }
+      .fact-item:nth-child(3) { border-right: var(--border-rule); }
+    }
+
+    @media (max-width: 540px) {
+      .facts-grid { grid-template-columns: 1fr; }
+      .fact-item { border-right: none; border-bottom: var(--border-rule); }
+      .fact-item:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav nav-violet" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="NETJET INFOTECH — home">
+        <svg class="nav-logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" fill="#F7F3EC" fill-opacity="0.15"/>
+          <path d="M6 8h6l8 12V8h6v16h-6L12 12v12H6V8z" fill="#F7F3EC"/>
+        </svg>
+        <div class="nav-logo-text">
+          NETJET
+          <span>INFOTECH PVT LTD</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="team.html">Team</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get in touch</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="industries.html">Industries</a>
+      <a href="team.html">Team</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <header class="page-hero page-hero--violet" aria-labelledby="about-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: end;">
+          <div>
+            <p class="section-label section-label--light">About</p>
+            <h1 id="about-heading" style="color: var(--cream); line-height: 1.05;">
+              NETJET INFOTECH<br>PVT LTD
+            </h1>
+          </div>
+          <div>
+            <p style="font-size: var(--step-1); color: var(--cream); opacity: 0.7; line-height: 1.65; max-width: 44ch;">An IT and design company incorporated in Kochi, Kerala on 2 June 2023. ISO-certified from our first year. Built on the conviction that technology and design should work together — not in separate departments.</p>
+            <div class="badge-row" style="margin-top: var(--space-xl);">
+              <div class="cert-badge cert-badge--light">
+                <span class="cert-badge__label">Certified</span>
+                <span class="cert-badge__name">ISO 9001:2015</span>
+              </div>
+              <div class="cert-badge cert-badge--light">
+                <span class="cert-badge__label">Certified</span>
+                <span class="cert-badge__name">ISO 27001:2013</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Company facts strip -->
+    <div class="facts-strip" aria-label="Company facts">
+      <div class="container">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <p class="fact-label">Incorporated</p>
+            <p class="fact-value">2 June 2023</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">CIN</p>
+            <p class="fact-value">U62099KL2023PTC081794</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">Head Office</p>
+            <p class="fact-value">Kochi, Kerala, India</p>
+          </div>
+          <div class="fact-item">
+            <p class="fact-label">Branch Offices</p>
+            <p class="fact-value">Bangalore · Singapore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision / Mission / Values -->
+    <section class="section" aria-labelledby="vmv-heading">
+      <div class="container">
+        <p class="section-label">What we stand for</p>
+        <h2 id="vmv-heading" class="visually-hidden">Vision, Mission, and Values</h2>
+
+        <div>
+          <div class="vmv-item">
+            <p class="vmv-label">Vision</p>
+            <p class="vmv-body">To become a leading IT company <em>internationally by 2030</em> — empowering users with tools that are not only powerful but also a joy to use, through the magic of design and technology.</p>
+          </div>
+
+          <div class="vmv-item">
+            <p class="vmv-label">Mission</p>
+            <p class="vmv-body">Create a more connected, efficient, and beautiful digital world through the <em>harmonious blend of technology and design</em> — ensuring every interaction is intuitive, secure, and visually striking.</p>
+          </div>
+
+          <div class="vmv-item">
+            <p class="vmv-label">Values</p>
+            <p class="vmv-body"><em>Innovate.</em> Design. <em>Inspire.</em> Succeed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO Message placeholder section -->
+    <!-- To add the CEO's message: replace the bracketed text and name below -->
+    <section class="section" style="background-color: var(--ink);" aria-labelledby="ceo-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 3fr 2fr; gap: var(--space-3xl); align-items: start;">
+          <div>
+            <p class="section-label section-label--light">A message from our founder</p>
+            <blockquote>
+              <p style=" font-size: var(--step-3); color: var(--cream); font-style: italic; line-height: 1.4; margin-bottom: var(--space-xl); max-width: 36ch;">
+                "We started NETJET with a simple belief: that the organizations who combine great technology with great design will always outperform those who treat them as separate concerns."
+              </p>
+              <p style="font-size: var(--step-0); color: var(--cream); opacity: 0.7; line-height: 1.7; max-width: 54ch; margin-bottom: var(--space-xl);">
+                What began as a small team in Kochi has grown into a distributed practice serving clients across industries and continents. The constants have been the quality of the work, the care in the client relationships, and the conviction that doing things properly — in both technical execution and visual craft — is always worth the extra effort.
+              </p>
+              <p style="font-size: var(--step-0); color: var(--cream); opacity: 0.7; line-height: 1.7; max-width: 54ch;">
+                Our goal by 2030 is to be a recognizably excellent IT company at international scale. Not the largest — the most trusted. We measure progress by the quality of the problems we're invited to solve, and by whether our clients keep coming back.
+              </p>
+            </blockquote>
+          </div>
+          <div style="padding-top: var(--space-2xl);">
+            <div style="border-top: 2px solid var(--terra); padding-top: var(--space-m);">
+              <p style=" font-size: var(--step-2); color: var(--cream); margin-bottom: 0.3rem;">[CEO Name]</p>
+              <p style=" font-size: var(--step--1); color: var(--cream); opacity: 0.4; letter-spacing: 0.08em; text-transform: uppercase;">Founder &amp; CEO, NETJET INFOTECH PVT LTD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" aria-labelledby="certs-heading">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start;">
+          <div>
+            <p class="section-label">Quality &amp; Security Standards</p>
+            <h2 id="certs-heading" style="margin-bottom: var(--space-l); max-width: 22ch;">Our Certifications</h2>
+            <p style="font-size: var(--step-0); color: var(--ink-soft); max-width: 48ch; line-height: 1.7;">Most companies earn quality certifications after years of operation. We hold both ISO 9001:2015 and ISO 27001:2013 — quality management and information security management — because our clients' data and their confidence in our processes are not afterthoughts.</p>
+          </div>
+          <div>
+            <div class="badge-row" style="flex-direction: column; align-items: flex-start; gap: var(--space-l);">
+              <div class="cert-badge" style="width: 100%;">
+                <span class="cert-badge__label">Quality Management System</span>
+                <span class="cert-badge__name">ISO 9001 : 2015</span>
+                <p style=" font-size: var(--step--1); color: var(--brand); opacity: 0.65; margin-top: 0.5rem;">Consistent quality processes across all service delivery — from brief to handover.</p>
+              </div>
+              <div class="cert-badge" style="width: 100%;">
+                <span class="cert-badge__label">Information Security Management</span>
+                <span class="cert-badge__name">ISO 27001 : 2013</span>
+                <p style=" font-size: var(--step--1); color: var(--brand); opacity: 0.65; margin-top: 0.5rem;">Rigorous controls over how client data is handled, stored, and protected.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Profile download -->
+    <section class="section" style="background-color: var(--cream-mid); border-top: var(--border-rule); border-bottom: var(--border-rule);" aria-labelledby="profile-heading">
+      <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-l);">
+          <div>
+            <p class="section-label">Company Profile</p>
+            <h2 id="profile-heading" style="font-size: var(--step-3); max-width: 28ch;">Company Profile Download</h2>
+          </div>
+          <div>
+            <!-- Replace # with the path to the actual PDF when available -->
+            <a href="#" class="btn btn-primary" download aria-label="Download NETJET INFOTECH company profile PDF">
+              Download Profile &darr;
+            </a>
+            <p style=" font-size: var(--step--1); color: var(--ink); opacity: 0.4; margin-top: var(--space-xs);">PDF · Company overview, services, certifications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">NETJET INFOTECH</div>
+          <span class="footer-logo-sub">PVT LTD</span>
+          <p class="footer-tagline">"Your goal, our code."<br>Innovate. Design. Inspire. Succeed.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="work.html">Our Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html#build">Build</a></li>
+            <li><a href="services.html#run">Run</a></li>
+            <li><a href="services.html#grow">Grow</a></li>
+            <li><a href="services.html#specialize">Specialize</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <address class="footer-address">
+            Suite 85J, A Square, Kochi<br>
+            <a href="tel:+918220201666">+91 82202 01666</a><br>
+            <a href="mailto:info@netjetit.com">info@netjetit.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">&copy; 2024 NETJET INFOTECH PVT LTD &nbsp;·&nbsp; CIN U62099KL2023PTC081794</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/netjet.design" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/918220201666" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

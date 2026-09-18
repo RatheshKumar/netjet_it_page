@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Solutions — NETJET INFOTECH</title>
+  <meta name="description" content="NETJET INFOTECH delivers end-to-end IT and design services: web and mobile development, cloud infrastructure, digital marketing, AI, cybersecurity, and specialist enterprise software.">
+  <link rel="canonical" href="https://netjetit.com/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .group-hero {
+      padding-top: calc(4rem + var(--space-3xl));
+      padding-bottom: var(--space-2xl);
+    }
+
+    .group-hero.violet {
+      background-color: var(--violet);
+    }
+
+    .group-hero.cream {
+      background-color: var(--cream);
+      border-bottom: var(--border-rule);
+    }
+
+    .group-label {
+      
+      font-size: var(--step-5);
+      color: var(--cream);
+      opacity: 0.07;
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+      letter-spacing: -0.02em;
+    }
+
+    .group-heading {
+      
+      font-size: var(--step-5);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .group-heading.ink { color: var(--ink); }
+
+    .group-intro {
+      font-size: var(--step-0);
+      max-width: 56ch;
+      margin-top: var(--space-m);
+      line-height: 1.7;
+    }
+
+    .group-intro.light { color: var(--cream); opacity: 0.75; }
+    .group-intro.dark { color: var(--ink-soft); }
+
+    /* Service group body */
+    .service-group {
+      padding-block: var(--space-3xl);
+    }
+
+    .service-group.cream { background-color: var(--cream); }
+    .service-group.violet { background-color: var(--violet); }
+
+    .service-group-inner {
+      display: grid;
+      grid-template-columns: 4fr 7fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    .service-group-stick {
+      position: sticky;
+      top: calc(4rem + var(--space-xl));
+    }
+
+    .service-group-num {
+      
+      font-size: var(--step--1);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-s);
+    }
+
+    .service-group-num.light { color: var(--cream); opacity: 0.4; }
+    .service-group-num.dark { color: var(--brand); }
+
+    .service-group-title {
+      
+      font-size: var(--step-4);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: var(--space-m);
+    }
+
+    .service-group-title.light { color: var(--cream); }
+    .service-group-title.dark { color: var(--ink); }
+
+    .service-group-desc {
+      font-size: var(--step-0);
+      line-height: 1.7;
+    }
+
+    .service-group-desc.light { color: var(--cream); opacity: 0.7; }
+    .service-group-desc.dark { color: var(--ink-soft); }
+
+    /* Service items list */
+    .service-item {
+      padding-block: var(--space-m);
+      border-bottom: var(--border-rule);
+    }
+
+    .service-item.dark-border { border-color: var(--rule-dark); }
+
+    .service-item:first-child { border-top: var(--border-rule); }
+    .service-item.dark-border:first-child { border-top-color: var(--rule-dark); }
+
+    .service-item__name {
+      
+      font-size: var(--step-2);
+      font-weight: var(--fw-regular);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-item__name.light { color: var(--cream); }
+    .service-item__name.dark { color: var(--ink); }
+
+    .service-item__desc {
+      
+      font-size: var(--step--1);
+      line-height: 1.65;
+      max-width: 58ch;
+    }
+
+    .service-item__desc.light { color: var(--cream); opacity: 0.6; }
+    .service-item__desc.dark { color: var(--ink-soft); }
+
+    /* CMS process timeline */
+    .cms-process {
+      margin-top: var(--space-xl);
+    }
+
+    .cms-process-title {
+      
+      font-size: var(--step--1);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.45;
+      margin-bottom: var(--space-m);
+    }
+
+    .cms-stages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .cms-stage {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      font-size: var(--step--1);
+      color: var(--cream);
+      opacity: 0.7;
+      padding: 0.4rem 0;
+    }
+
+    .cms-stage::after {
+      content: '→';
+      margin-left: 0.5rem;
+      opacity: 0.35;
+    }
+
+    .cms-stage:last-child::after { display: none; }
+
+    @media (max-width: 900px) {
+      .service-group-inner { grid-template-columns: 1fr; }
+      .service-group-stick { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav nav-violet" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="NETJET INFOTECH — home">
+        <svg class="nav-logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" fill="#F7F3EC" fill-opacity="0.15"/>
+          <path d="M6 8h6l8 12V8h6v16h-6L12 12v12H6V8z" fill="#F7F3EC"/>
+        </svg>
+        <div class="nav-logo-text">
+          NETJET
+          <span>INFOTECH PVT LTD</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="work.html">Work</a>
+        <a href="industries.html">Industries</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get in touch</a>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" aria-hidden="true">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="industries.html">Industries</a>
+      <a href="team.html">Team</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- Page hero -->
+    <header class="group-hero violet" aria-labelledby="services-page-heading">
+      <div class="container">
+        <p class="section-label section-label--light">Services &amp; Solutions</p>
+        <h1 class="group-heading" id="services-page-heading">
+          Build. Run.<br>Grow. Specialize.
+        </h1>
+        <p class="group-intro light">Four clear disciplines. One integrated team. Everything from a first-release website to a multi-continent IT infrastructure — designed and delivered in Kochi, deployed everywhere.</p>
+      </div>
+    </header>
+
+    <!-- 01 — BUILD -->
+    <section class="service-group cream" id="build" aria-labelledby="build-heading">
+      <div class="container">
+        <div class="service-group-inner">
+          <div class="service-group-stick">
+            <p class="service-group-num dark">01 / Build</p>
+            <h2 class="service-group-title dark" id="build-heading">Build & Develop</h2>
+            <p class="service-group-desc dark">Whether it's a consumer app, an enterprise web platform, or a physical product brought to market, our Build practice turns ideas and requirements into shipped, working software and designed experiences. We own the brief from concept through to deployment.</p>
+          </div>
+
+          <div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Web Development</h3>
+              <p class="service-item__desc dark">Full-stack web projects built to perform under load. E-commerce, corporate platforms, portals, and web applications developed with clean architecture and maintainable code.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Mobile App Development</h3>
+              <p class="service-item__desc dark">Native and cross-platform mobile applications for iOS and Android. Built with Flutter, React Native, and platform-specific tooling — optimized for speed, usability, and app-store guidelines.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Custom Software Development</h3>
+              <p class="service-item__desc dark">Bespoke software built around your workflow rather than the other way around. From internal tooling to client-facing platforms, we design and develop software that fits what you actually do.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Design — Branding, Print &amp; Digital Creative</h3>
+              <p class="service-item__desc dark">Visual identity, print materials, signage, and advertising creative. A dedicated design practice — <a href="https://instagram.com/netjet.design" target="_blank" rel="noopener noreferrer" style="color:var(--terra);">NETJET Design Services</a> — working across digital and physical formats.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">New Product Design &amp; Development</h3>
+              <p class="service-item__desc dark">From early-stage concept validation and UX prototyping through to technical specification and first-release development — we help take new products from idea to market-ready.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 — RUN -->
+    <section class="service-group violet" id="run" aria-labelledby="run-heading">
+      <div class="container">
+        <div class="service-group-inner">
+          <div class="service-group-stick">
+            <p class="service-group-num light">02 / Run</p>
+            <h2 class="service-group-title light" id="run-heading">Run & Manage</h2>
+            <p class="service-group-desc light">Once things are built, they need to run without interruption. Our Run practice covers the full stack of IT operations — cloud, network, security, data, and project governance — so your team can focus on the work that matters.</p>
+          </div>
+
+          <div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Cloud Services</h3>
+              <p class="service-item__desc light">Private, public, hybrid, and multicloud architectures across AWS, Azure, and Google Cloud. IaaS, PaaS, and SaaS deployments — designed for scalability, compliance, and cost control.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Network Installation</h3>
+              <p class="service-item__desc light">Structured cabling, switching, wireless, and WAN design for offices and facilities. Commissioned, documented, and handed over with ongoing support agreements.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Server Maintenance</h3>
+              <p class="service-item__desc light">Proactive monitoring, patching, capacity planning, and incident response for on-premise and cloud-hosted server environments.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Cyber Security</h3>
+              <p class="service-item__desc light">Cybersecurity as a Service (CSaaS), SIEM deployment, endpoint protection, and continuous monitoring. Security posture assessment and compliance alignment for regulated industries.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Data Management &amp; Security</h3>
+              <p class="service-item__desc light">Data architecture, backup strategy, encryption, access control, and regulatory compliance (GDPR, HIPAA-aligned). Making your data an asset, not a liability.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Repair &amp; IT Support Services</h3>
+              <p class="service-item__desc light">Hardware repair, software troubleshooting, and managed helpdesk support for organizations that need reliable day-to-day IT without a full internal team.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Project Management</h3>
+              <p class="service-item__desc light">Dedicated project governance — planning, risk management, stakeholder communication, and delivery oversight — applied across both our own engagements and client-side programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — GROW -->
+    <section class="service-group cream" id="grow" aria-labelledby="grow-heading">
+      <div class="container">
+        <div class="service-group-inner">
+          <div class="service-group-stick">
+            <p class="service-group-num dark">03 / Grow</p>
+            <h2 class="service-group-title dark" id="grow-heading">Grow & Market</h2>
+            <p class="service-group-desc dark">Technology alone doesn't drive growth — the right message reaching the right audience at the right time does. Our Grow practice combines marketing execution with purpose-built marketing software and CRM capability.</p>
+          </div>
+
+          <div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Digital Marketing</h3>
+              <p class="service-item__desc dark">Search engine optimization, paid social and PPC, email campaigns, content strategy, and community management — managed as a single, measurable effort rather than siloed channels.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">Custom Marketing Software</h3>
+              <p class="service-item__desc dark">When off-the-shelf marketing tools don't fit, we build them. Campaign management, lead scoring, analytics dashboards, and automation tools designed for your specific go-to-market model.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">CRM Software</h3>
+              <p class="service-item__desc dark">CRM consulting, system selection, custom development, data migration, user training, and ongoing support. Whether you're choosing a CRM for the first time or modernizing a legacy system, we manage the full journey.</p>
+            </div>
+            <div class="service-item">
+              <h3 class="service-item__name dark">eCommerce &amp; Web Portal Development</h3>
+              <p class="service-item__desc dark">Commerce platforms, B2B portals, and membership-gated web applications — built for conversion, integrated with payment gateways, and structured for long-term content management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — SPECIALIZE -->
+    <section class="service-group violet" id="specialize" aria-labelledby="specialize-heading">
+      <div class="container">
+        <div class="service-group-inner">
+          <div class="service-group-stick">
+            <p class="service-group-num light">04 / Specialize</p>
+            <h2 class="service-group-title light" id="specialize-heading">Specialized Services</h2>
+            <p class="service-group-desc light">Some challenges require more than a standard service catalogue. Our Specialize practice covers consulting, emerging technology, enterprise software, and applied research — for organizations ready to move beyond off-the-shelf solutions.</p>
+          </div>
+
+          <div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">IT Consulting</h3>
+              <p class="service-item__desc light">Strategic planning, technology selection, system integration, security and compliance, performance optimization, and training — structured as advisory engagements rather than hours-based billing.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Artificial Intelligence</h3>
+              <p class="service-item__desc light">Machine learning models, NLP pipelines, image processing, robotic process automation (RPA), virtual agents, and decision management systems. Applied AI — not AI for its own sake.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Automation &amp; Robotization</h3>
+              <p class="service-item__desc light">Business process automation, workflow orchestration, and hardware-integrated robotics for manufacturing and logistics environments.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Big Data Services</h3>
+              <p class="service-item__desc light">Big data consulting, pipeline development, support, and managed analytics. We design the architecture that turns data volume into usable insight.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Internet of Things</h3>
+              <p class="service-item__desc light">Device integration, sensor networks, edge computing, and IoT platform development — from smart facilities to industrial monitoring systems.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Custom ERP Software</h3>
+              <p class="service-item__desc light">Enterprise resource planning systems built to your operational model — not your operational model bent to fit a generic ERP.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">HR Software</h3>
+              <p class="service-item__desc light">Recruitment management, onboarding, leave and attendance, payroll integration, and people analytics — built for your HR team's actual processes.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">eLearning Software</h3>
+              <p class="service-item__desc light">Learning management systems, interactive courseware, assessment platforms, and blended-learning environments for corporate and educational institutions.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Document Automation Software</h3>
+              <p class="service-item__desc light">Template-driven document generation, digital signatures, approval workflows, and archiving — replacing manual document handling across legal, HR, and operations teams.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Supply Chain Management Software</h3>
+              <p class="service-item__desc light">Demand forecasting, inventory optimization, supplier management, and end-to-end visibility platforms for manufacturing and distribution organizations.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Fleet Management Software</h3>
+              <p class="service-item__desc light">Real-time vehicle tracking, maintenance scheduling, driver management, and route optimization for transport and logistics operators.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Kiosk Software</h3>
+              <p class="service-item__desc light">Self-service kiosk interfaces for retail, hospitality, healthcare, and public services — designed for high-volume, low-support operation.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Digital &amp; Financial Operations Management</h3>
+              <p class="service-item__desc light">Operational dashboards, financial reporting systems, and management information platforms that put the right numbers in front of the right people.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Asset Management</h3>
+              <p class="service-item__desc light">Physical and digital asset registers, depreciation tracking, maintenance scheduling, and compliance reporting — integrated with your existing ERP where relevant.</p>
+            </div>
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">Data Analytics</h3>
+              <p class="service-item__desc light">Business intelligence, interactive dashboards, and analytical modelling using Power BI, Tableau, Python, and SQL — turning operational data into actionable decisions.</p>
+            </div>
+
+            <!-- CMS with 8-stage process -->
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">CMS Development</h3>
+              <p class="service-item__desc light">Content management systems that editors actually enjoy using — structured around your content model, not a generic plugin architecture. Delivered across eight defined stages:</p>
+              <div class="cms-process">
+                <p class="cms-process-title">Our 8-stage delivery process</p>
+                <div class="cms-stages">
+                  <span class="cms-stage">Conceptualization</span>
+                  <span class="cms-stage">Planning</span>
+                  <span class="cms-stage">Design</span>
+                  <span class="cms-stage">Development</span>
+                  <span class="cms-stage">Testing &amp; QA</span>
+                  <span class="cms-stage">Data Migration</span>
+                  <span class="cms-stage">User Training &amp; Launch</span>
+                  <span class="cms-stage">After-launch Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-item dark-border">
+              <h3 class="service-item__name light">IT Research Lab</h3>
+              <p class="service-item__desc light">An active research environment with a structured internship programme for students and recent graduates in software development, cybersecurity, data analytics, cloud computing, UI/UX, and more. <a href="careers.html" style="color: var(--cream); text-decoration: underline;">Learn about internships →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="services-cta-heading">
+      <div class="container" style="text-align: center;">
+        <p class="section-label" style="display:block; text-align:center;">Ready to talk?</p>
+        <h2 id="services-cta-heading" style="max-width: 24ch; margin-inline: auto; margin-bottom: var(--space-xl);">Start a Project</h2>
+        <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">NETJET INFOTECH</div>
+          <span class="footer-logo-sub">PVT LTD</span>
+          <p class="footer-tagline">"Your goal, our code."<br>Innovate. Design. Inspire. Succeed.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Company</h6>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="work.html">Our Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="#build">Build</a></li>
+            <li><a href="#run">Run</a></li>
+            <li><a href="#grow">Grow</a></li>
+            <li><a href="#specialize">Specialize</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <address class="footer-address">
+            Suite 85J, A Square, Kochi, Kerala 683 561<br>
+            <a href="tel:+918220201666">+91 82202 01666</a><br>
+            <a href="mailto:info@netjetit.com">info@netjetit.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-legal">&copy; 2024 NETJET INFOTECH PVT LTD &nbsp;·&nbsp; CIN U62099KL2023PTC081794</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/netjet.design" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/918220201666" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
